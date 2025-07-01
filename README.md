@@ -1,69 +1,68 @@
-# React + TypeScript + Vite
+# Custom Markers Map
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript + Vite project that displays a map with custom markers for different places in Riyadh, Saudi Arabia. Each marker represents a location such as a mosque, park, training center, or landmark, and clicking a marker opens a sidebar with detailed information and an image gallery.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🗺️ **Interactive Map**: Built with [react-leaflet](https://react-leaflet.js.org/) and [Leaflet](https://leafletjs.com/).
+- 📍 **Custom Markers**: Each place type (mosque, park, etc.) uses a unique icon.
+- 🖼️ **Image Gallery**: View multiple photos for each place, with fullscreen preview and navigation.
+- ℹ️ **Info Sidebar**: Click a marker to open a sidebar with details, address, and summary.
+- 🎨 **Modern UI**: Styled with [Tailwind CSS](https://tailwindcss.com/) and [shadcn/ui](https://ui.shadcn.com/).
+- 📱 **Responsive**: Works on desktop and mobile devices.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [bun](https://bun.sh/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+bun install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+bun run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+### Build
+
+```sh
+bun run build
+```
+
+
+## Project Structure
+
+- `src/`
+  - `App.tsx` — Main app with map and marker logic
+  - `data/places.tsx` — Place data and marker info
+  - `components/` — UI components (info sheet, image gallery, etc.)
+  - `assets/icons/` — Custom SVG and PNG marker icons
+  - `types/place.ts` — TypeScript types for places
+
+## Customization
+
+- Add or edit places in [`src/data/places.tsx`](src/data/places.tsx).
+- Add new icons in [`src/assets/icons/`](src/assets/icons/).
+- Update styles in [`src/index.css`](src/index.css) or [`src/App.css`](src/App.css).
+
+## Credits
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Leaflet](https://leafletjs.com/)
+- [react-leaflet](https://react-leaflet.js.org/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## License
+
+MIT

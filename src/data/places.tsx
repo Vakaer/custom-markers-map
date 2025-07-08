@@ -1,6 +1,6 @@
 import AlcIcon from "@/assets/icons/alc-icon.png";
 import KingdomIcon from "@/assets/icons/kingdom-center.png";
-import MosqueIcon from "@/assets/icons/Mosque.png";
+import MosqueIcon from "@/assets/icons/mosque.png";
 import ParkIcon from "@/assets/icons/Park.png";
 import AlcNight from "@/assets/images/alc/alc-building-night.jpg";
 import AlcBuilding from "@/assets/images/alc/alc-building.jpg";

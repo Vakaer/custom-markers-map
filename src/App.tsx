@@ -59,6 +59,10 @@ export default function App() {
             key={place.id}
             position={[place.latLng.lat, place.latLng.lng]}
             icon={place.icon ? L.icon({ iconUrl: place.icon, iconSize: [56, 56], iconAnchor: [16, 32] }) : undefined}
+            riseOnHover={true}
+            zIndexOffset={1000}
+            title={place.displayName}
+            alt={place.displayName}
             eventHandlers={{
               click: () => {
                 handleMapClick(place)

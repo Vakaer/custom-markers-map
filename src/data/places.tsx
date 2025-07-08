@@ -1,12 +1,12 @@
-import MosqueIcon from "@/assets/icons/mosque-icon.svg";
-import ParkIcon from "@/assets/icons/park-icon.svg";
-import KingdomHallIcon from "@/assets/icons/kingdom-hall-icon.svg";
 import AlcIcon from "@/assets/icons/alc-icon.png";
-import type { Place } from "@/types/place";
-import AlcBuilding from "@/assets/images/alc/alc-building.jpg";
-import AlcInside from "@/assets/images/alc/alc-inside.jpg";
-import AlcInsideOne from "@/assets/images/alc/alc-inside-1.jpg";
+import KingdomIcon from "@/assets/icons/kingdom-center.png";
+import MosqueIcon from "@/assets/icons/Mosque.png";
+import ParkIcon from "@/assets/icons/Park.png";
 import AlcNight from "@/assets/images/alc/alc-building-night.jpg";
+import AlcBuilding from "@/assets/images/alc/alc-building.jpg";
+import AlcInsideOne from "@/assets/images/alc/alc-inside-1.jpg";
+import AlcInside from "@/assets/images/alc/alc-inside.jpg";
+import type { Place } from "@/types/place";
 
 import KingdomCenter1 from "@/assets/images/kingdom-center/kingdom-center-1.jpg";
 import KingdomCenter2 from "@/assets/images/kingdom-center/kingdom-center-2.jpg";
@@ -70,7 +70,7 @@ export const places: Place[] = [
     ],
     editorialSummary:
       "Futuristic shopping mall with luxury brands, plus a sky bridge offering panoramic city views.",
-    icon: KingdomHallIcon,
+    icon: KingdomIcon,
     type: "kingdom_hall",
   },
   {
